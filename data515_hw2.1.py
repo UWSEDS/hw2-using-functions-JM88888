@@ -14,21 +14,22 @@ def test_create_dataframe(df):
    2. The columns contain the correct data type
    3. There are at least 10 rows in the DataFrame.
     """
+    """Test number of columns"""
     if len(df.columns) < 3:
         print("Dataframe has less than three columns")
         return False
-
+    """Test names of columns"""
     df_cols = ["PermitClass", "PermitTypeDesc", "EstProjectCost"]
     check = df.columns == df_cols
     if not all(check):
         print("Column names not the same")
         return False
-
+    """Test number of rows"""
     rows = np.size(df, 0)
     if rows < 10:
         print("Fewer than ten rows")
         return False
-
+    """Test datatypes of columns"""
     if permits["PermitClass"].dtype != object:
         print("PermitClass wrong data type")
         return False
