@@ -29,18 +29,17 @@ def test_create_dataframe(df):
         print("Fewer than ten rows")
         return False
 
-    for col in range(len(df.columns)):
-        if permits["PermitClass"].dtype != object:
-            print("PermitClass wrong data type")
-            return False
-        elif permits["PermitTypeDesc"].dtype != object:
-            print("PermitTypeDesc wrong data type")
-            return False
-        elif permits["EstProjectCost"].dtype != float:
-            print("EstProjectCost wrong data type")
-            return False
-        else:
-            return True
+    if permits["PermitClass"].dtype != object:
+        print("PermitClass wrong data type")
+        return False
+    elif permits["PermitTypeDesc"].dtype != object:
+        print("PermitTypeDesc wrong data type")
+        return False
+    elif permits["EstProjectCost"].dtype != float:
+        print("EstProjectCost wrong data type")
+        return False
+    else:
+        return True
 
 """A simple check to show the function can work"""
 test_create_dataframe(permits)
