@@ -1,6 +1,12 @@
 # HW2 - Using Functions
 
-##### Grade: 1/7
+##### Final grade: 6/7   
+
+
+-1: ```check = df.columns == df_cols``` will return true even if the dataframe has all the required columns but in a different order.   
+
+
+Grade: 1/7    
 
 -3: Didn't check that the dataframe has at least 3 columns   
 -1: Didn't check that the dataframe has only the columns you specified in #1.   
